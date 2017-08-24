@@ -30,6 +30,9 @@ Plugin 'garbas/vim-snipmate'
 " Simple lightweight autocompletion
 Plugin 'ajh17/vimcompletesme'
 
+" CtrlP used in OmniSharp
+Plugin 'ctrlpvim/ctrlp.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -118,8 +121,19 @@ nnoremap <Leader>SC :setlocal spell spelllang=en_gb<enter>
 nnoremap ; :
 nnoremap : ;
 
+nmap - ddp
+
 " Set cursor line
 set cursorline
+
+
+" Mappings
+"-----------------
+
+" Change snipmate mapping from defualt tab to <C-J> to not interfer with
+" vimcompleteme
+:imap <C-n>  <Plug>snipMateNextOrTrigger
+:smap <C-n> <Plug>snipMateNextOrTrigger
 
 " Explore settings
 "-----------------
